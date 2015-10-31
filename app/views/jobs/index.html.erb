@@ -5,7 +5,7 @@
     <%= form_tag("/search", method: "get") do %>
       <div id="custom-search-input">
       <div class="input-group col-md-6">
-          <input id="q" name="q" type="text" class="  search-query form-control" placeholder="Search" />
+          <input id="q" name="q" type="text" class="search-query form-control" placeholder="Search" />
           <span class="input-group-btn">
               <button class="btn btn-danger" type="search">
                   <span class=" glyphicon glyphicon-search"></span>
@@ -15,4 +15,20 @@
     </div>
     <% end %>    
   </div>
+  <div class="row">
+  	<ul class="list-group">
+	  	<%= @jobss.each do|job| %>		
+  		  <li class="list-group-item">
+  		  	<p>
+  		  		<%= "#{job.title} at #{job.city}" %> 
+  		  	</p>
+  		  	<p>
+  		  		<%= "#{job.body}" %>
+  		  	</p>
+  		  	
+  		  </li>
+		  <% end %>
+	 </ul>	
+  </div>
 </div>
+
