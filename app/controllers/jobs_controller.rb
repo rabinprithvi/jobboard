@@ -5,6 +5,6 @@ class JobsController < ApplicationController
 	end
 
 	def autocomplete
-		render json: Job.search(params[:term], fields: [{title: :text_start}], limit: 10).map(&:title)
+		render json: Job.search(params[:term], fields: [{title: :text_start}], limit: 10).map(&:title).uniq
 	end
 end
