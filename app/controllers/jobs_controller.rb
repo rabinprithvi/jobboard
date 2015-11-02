@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 	def index
-		query = params[:q].presence || "*"
-    	@jobs = Job.search(query)
+		@query = params[:q].presence || "*"
+    	@jobs = Job.search(@query)
 	end
 
 	def autocomplete

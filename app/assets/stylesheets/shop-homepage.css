@@ -4,3 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
