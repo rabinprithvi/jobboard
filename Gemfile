@@ -8,6 +8,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'searchkick'
 gem 'jquery-ui-rails'
+gem 'sidekiq'
+gem 'letter_opener'
+gem 'launchy'
+gem 'sinatra', '>= 1.3.0', :require => nil
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

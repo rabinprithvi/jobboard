@@ -1,0 +1,16 @@
+<style>
+label {
+    width: 100px;
+    display: block;
+}​
+</style>
+
+<%= form_tag('/visitors/mail', method: "post") do|f| %>
+	<%= label_tag(:name, "Name") %>
+	<%= text_field_tag(:name) %><br>
+	<%= label_tag(:email, "Email") %>
+	<%= text_field_tag(:email) %><br>
+	<%= label_tag(:message, "Message") %>
+	<%= text_field_tag(:message) %><br><br>
+	<%= submit_tag("Submit") %>
+<% end %>
